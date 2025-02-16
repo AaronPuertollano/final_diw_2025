@@ -4,10 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./index.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1 class="text-9xl font-bold underline">
-      Hello world! 2
-    </h1>
-  </body>
+  <body class="bg-gray-100">
+
+    
+    <header class="bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                               
+                <a href="#" class="text-2xl font-bold text-gray-800">Mi Sitio</a>
+       
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-500">Inicio</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-500">Galería</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-500">Sobre Nosotros</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-500">Preguntas Frecuentes</a>
+                </nav>
+
+                <button id="menu-btn" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden">
+                <a href="#" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Inicio</a>
+                <a href="#" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Galería</a>
+                <a href="#" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Sobre Nosotros</a>
+                <a href="#" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Preguntas Frecuentes</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
 </html>
