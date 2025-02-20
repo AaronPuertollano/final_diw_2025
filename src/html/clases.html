@@ -40,6 +40,81 @@
         </div>
     </header>
 
+        <!-- Sección Clases -->
+        <main class="max-w-4xl mx-auto my-10 px-4">
+            <h1 class="text-3xl font-bold text-gray-800 text-center mb-6">Nuestras Clases</h1>
+    
+            <!-- Clases de Vela -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                <h2 class="text-2xl font-semibold text-blue-600">Vela</h2>
+                <p class="mt-2 text-gray-600">Aprende a navegar en velero con instructores certificados. Clases prácticas en el mar para todos los niveles.</p>
+                <p class="mt-2 font-bold text-gray-700">Precio: 80€ / mes</p>
+            </div>
+    
+            <!-- Clases de Piragüismo -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-blue-600">Piragüismo</h2>
+                <p class="mt-2 text-gray-600">Explora nuestra costa con nuestras clases adaptadas para principiantes y expertos.</p>
+                <p class="mt-2 font-bold text-gray-700">Precio: 60€ / mes</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-blue-600">Ecuela de verano</h2>
+                <p class="mt-2 text-gray-600">Un programa especial para niños y jóvenes donde pueden aprender vela y piragüismo en un ambiente divertido y seguro.</p>
+                <p class="mt-2 font-bold text-gray-700">Precio: 180€ / 2 meses</p>
+            </div>
+        </main>
+    
+        <!-- Carrusel de Imágenes -->
+        <div class="relative max-w-4xl mx-auto mt-10 overflow-hidden rounded-lg shadow-lg">
+            <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+                <img src="../../media/img/clase_nautico.jpg" class="w-full">
+                <img src="../../media/img/catedral_water.jpg" class="w-full hidden">
+                <img src="../../media/img/vela.jpg" class="w-full hidden">
+            </div>
+    
+            <!-- Botones de navegación -->
+            <button id="prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                ❮
+            </button>
+            <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                ❯
+            </button>
+        </div>
+    
+        <script>
+            // Toggle menú móvil
+            document.getElementById('menu-btn').addEventListener('click', function () {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+    
+            // Carrusel de imágenes
+            const images = document.querySelectorAll("#carousel img");
+            let index = 0;
+    
+            function showSlide(i) {
+                images.forEach(img => img.classList.add("hidden"));
+                images[i].classList.remove("hidden");
+            }
+    
+            document.getElementById("prev").addEventListener("click", () => {
+                index = (index - 1 + images.length) % images.length;
+                showSlide(index);
+            });
+    
+            document.getElementById("next").addEventListener("click", () => {
+                index = (index + 1) % images.length;
+                showSlide(index);
+            });
+    
+            // Auto-slide cada 5 segundos
+            setInterval(() => {
+                index = (index + 1) % images.length;
+                showSlide(index);
+            }, 9000);
+        </script>
+
+
 
 <script type="module" src="../index.js"></script>
 

@@ -9,21 +9,21 @@
   <body class="bg-gray-100">
 
     
-    <header class="bg-white shadow-md">
+    <header class="bg-gray-900 shadow-md">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                                
-                <a href="#" class="text-2xl font-bold text-gray-800">Mi Sitio</a>
+                <a href="#" class="text-2xl font-bold text-white">Mi Sitio</a>
        
                 <nav class="hidden md:flex space-x-6">
-                    <a href="index.html" class="text-gray-600 hover:text-blue-500">Inicio</a>
-                    <a href="./html/horario.html" class="text-gray-600 hover:text-blue-500">Horarios</a>
-                    <a href="./html/clases.html" class="text-gray-600 hover:text-blue-500">Clases</a>
-                    <a href="./html/historia.html" class="text-gray-600 hover:text-blue-500">Historia</a>
-                    <a href="./html/contacto.html" class="text-gray-600 hover:text-blue-500">Contacto</a>
+                    <a href="index.html" class="text-white hover:text-blue-500">Inicio</a>
+                    <a href="./html/horario.html" class="text-white hover:text-blue-500">Horarios</a>
+                    <a href="./html/clases.html" class="text-white hover:text-blue-500">Clases</a>
+                    <a href="./html/historia.html" class="text-white hover:text-blue-500">Historia</a>
+                    <a href="./html/contacto.html" class="text-white hover:text-blue-500">Contacto</a>
                 </nav>
 
-                <button id="menu-btn" class="md:hidden focus:outline-none">
+                <button id="menu-btn" class="md:hidden focus:outline-none text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -31,29 +31,67 @@
             </div>
 
             <div id="mobile-menu" class="hidden md:hidden">
-                <a href="index.html" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Inicio</a>
-                <a href="./html/horario.html" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Horarios</a>
-                <a href="./html/clases.html" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Clases</a>
-                <a href="./html/historia.html" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Historia</a>
-                <a href="./html/contacto.html" class="block py-2 px-4 text-gray-600 hover:bg-gray-200">Contacto</a>
+                <a href="index.html" class="block py-2 px-4 text-white">Inicio</a>
+                <a href="./html/horario.html" class="block py-2 px-4 text-white">Horarios</a>
+                <a href="./html/clases.html" class="block py-2 px-4 text-white">Clases</a>
+                <a href="./html/historia.html" class="block py-2 px-4 text-white">Historia</a>
+                <a href="./html/contacto.html" class="block py-2 px-4 text-white">Contacto</a>
             </div>
         </div>
     </header>
 
-    <div class="relative max-w-4xl mx-auto mt-6 overflow-hidden rounded-lg shadow-lg">
-      <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
-          <img src="../media/img/marcus.jpg" class="w-full">
-          <img src="../media/img/clase_nautico.jpg" class="w-full hidden ">
-          <img src="../media/img/barco_flotando.jpg" class="w-full hidden ">
-      </div>
 
-      <button id="prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
-          ❮
-      </button>
-      <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
-          ❯
-      </button>
-  </div>
+    <section class="max-w-4xl mx-auto my-10 px-4 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Conoce </h2>
+        
+        <video class="w-full rounded-lg shadow-lg" controls>
+            <source src="../media/video/video_intro.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8 mt-10">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Contacto</h3>
+                <p class="text-gray-400">📍 Dirección: Calle Náutica 123, Ciudad</p>
+                <p class="text-gray-400">📞 Teléfono: +34 123 456 789</p>
+                <p class="text-gray-400">📧 Email: info@escueladevela.com</p>
+            </div>
+    
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Enlaces</h3>
+                <ul>
+                    <li><a href="../index.html" class="text-gray-400 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Inicio</a></li>
+                    <li><a href="clases.html" class="text-gray-400 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Clases</a></li>
+                    <li><a href="horario.html" class="text-gray-400 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Horarios</a></li>
+                    <li><a href="contacto.html" class="text-gray-400 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">Contacto</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 class="text-lg font-semibold mb-2">Síguenos</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        📘 Facebook
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        📷 Instagram
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        🐦 Twitter (X)
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            &copy; 2025 Aaron Puertollano.
+        </div>
+    </footer>
+    
 
 <script type="module" src="index.js"></script>
 
