@@ -82,7 +82,7 @@
       </p>
 
       <div class="bg-white shadow-md rounded-lg p-6">
-        <form method="POST" id="contact-form" onsubmit="sendEmail(event)">
+        <form id="contact-form" onsubmit="sendEmail(event)">
           <div class="mb-4">
             <label class="block text-gray-700 font-semibold" for="nombre"
               >Nombre</label
@@ -217,6 +217,7 @@
           .then(
             function (response) {
               alert("✅ Mensaje enviado correctamente!");
+              document.getElementById("contact-form").reset();
             },
             function (error) {
               alert("❌ Error al enviar el mensaje: " + JSON.stringify(error));
