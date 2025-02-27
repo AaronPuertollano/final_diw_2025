@@ -6,11 +6,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="../../media/img/mini_logo.jpg" />
     <title>RCNP - Contacto</title>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-      (function () {
-        emailjs.init("_rdpc_mVEgPoarO0X");
-      })();
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "_rdpc_mVEgPoarO0X",
+            });
+        })();
     </script>
   </head>
   <body class="bg-gray-100">
@@ -213,7 +215,7 @@
         event.preventDefault();
 
         emailjs
-          .sendForm("service_8ljrs0p", "template_87f73ri", "#contact-form", "_rdpc_mVEgPoarO0X")
+          .sendForm("service_8ljrs0p", "template_87f73ri", "#contact-form")
           .then(
             function (response) {
               alert("✅ Mensaje enviado correctamente!");
