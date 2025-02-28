@@ -2,7 +2,6 @@ document.getElementById('menu-btn').addEventListener('click', function () {
     document.getElementById('mobile-menu').classList.toggle('hidden');
 });
 
-// Carrusel
 const images = document.querySelectorAll("#carousel img");
 let index = 0;
 
@@ -21,8 +20,15 @@ document.getElementById("next").addEventListener("click", () => {
     showSlide(index);
 });
 
-// Auto-slide cada 5 segundos
 setInterval(() => {
     index = (index + 1) % images.length;
     showSlide(index);
 }, 9000);
+
+document.addEventListener("DOMContentLoaded", function () {
+    let video = document.getElementById("video");
+
+    video.addEventListener("play", function () {
+        video.muted = false;
+    });
+});
